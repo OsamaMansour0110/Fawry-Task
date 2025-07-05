@@ -121,6 +121,7 @@ exports.checkout = catchAsync(async (req, res, next) => {
 
   await CartModel.deleteOne({ user: req.user.id });
   res.status(200).json({
-    status: 'success'
+    status: 'success',
+    message: 'Please check your gmail'
   });
 });
